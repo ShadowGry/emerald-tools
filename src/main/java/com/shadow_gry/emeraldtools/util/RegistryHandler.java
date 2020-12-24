@@ -1,7 +1,9 @@
 package com.shadow_gry.emeraldtools.util;
 
 import com.shadow_gry.emeraldtools.EmeraldTools;
+import com.shadow_gry.emeraldtools.armor.ModArmorTier;
 import com.shadow_gry.emeraldtools.tools.ModToolTier;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -31,4 +33,17 @@ public class RegistryHandler {
 
     public static final RegistryObject<SwordItem> EMERALD_SWORD = ITEMS.register("emerald_sword", () ->
             new SwordItem(ModToolTier.EMERALD, 2, -2.4F, new Item.Properties().group(EmeraldTools.TAB)));
+
+    // Armor
+    public static final RegistryObject<ArmorItem> EMERALD_HELMET = ITEMS.register("emerald_helmet", () ->
+            new ArmorItem(ModArmorTier.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().group(EmeraldTools.TAB)));
+
+    public static final RegistryObject<ArmorItem> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () ->
+            new ArmorItem(ModArmorTier.EMERALD, EquipmentSlotType.CHEST, new Item.Properties().group(EmeraldTools.TAB)));
+
+    public static final RegistryObject<ArmorItem> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () ->
+            new ArmorItem(ModArmorTier.EMERALD, EquipmentSlotType.LEGS, new Item.Properties().group(EmeraldTools.TAB)));
+
+    public static final RegistryObject<ArmorItem> EMERALD_BOOTS = ITEMS.register("emerald_boots", () ->
+            new ArmorItem(ModArmorTier.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(EmeraldTools.TAB)));
 }
