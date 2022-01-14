@@ -15,8 +15,8 @@ import java.util.function.Supplier;
 public enum ModArmorTier implements IArmorMaterial {
 
     // TODO: Balance sample values.
-    EMERALD(25, new int[] {2, 5, 6, 2}, 18, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC,
-            EmeraldTools.MOD_ID + ":emerald", 0.0F, () -> {return Ingredient.fromItems(Items.EMERALD); });
+    EMERALD(25, new int[] {2, 5, 6, 2}, 18, SoundEvents.ARMOR_EQUIP_GENERIC,
+            EmeraldTools.MOD_ID + ":emerald", 0.0F, () -> {return Ingredient.of(Items.EMERALD); }, 0);
 
     private static int[] MAX_DAMAGE = new int[] {11, 16, 15, 13};
     private int maxDamageFactor;
@@ -26,9 +26,10 @@ public enum ModArmorTier implements IArmorMaterial {
     private String name;
     private float toughness;
     private Supplier<Ingredient> repairMaterial;
+    private float knockbackResistance;
 
     ModArmorTier(int maxDamageFactor, int[] damageReductionAmount, int enchantability, SoundEvent soundEvent,
-                 String name, float toughness, Supplier<Ingredient> repairMaterial) {
+                 String name, float toughness, Supplier<Ingredient> repairMaterial, float knockbackResistance) {
         this.maxDamageFactor = maxDamageFactor;
         this.damageReductionAmount = damageReductionAmount;
         this.enchantability = enchantability;
@@ -36,33 +37,35 @@ public enum ModArmorTier implements IArmorMaterial {
         this.name = name;
         this.toughness = toughness;
         this.repairMaterial = repairMaterial;
+        this.knockbackResistance = knockbackResistance;
     }
 
     @Override
-    public int getDurability(EquipmentSlotType slotIn) {
+    public int getDurabilityForSlot(EquipmentSlotType slotIn) {
         return MAX_DAMAGE[slotIn.getIndex()] * maxDamageFactor;
     }
 
     @Override
-    public int getDamageReductionAmount(EquipmentSlotType slotIn) {
+    public int getDefenseForSlot(EquipmentSlotType slotIn) {
         return damageReductionAmount[slotIn.getIndex()];
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
         return enchantability;
     }
 
     @Override
-    public SoundEvent getSoundEvent() {
+    public SoundEvent getEquipSound() {
         return soundEvent;
     }
 
     @Override
-    public Ingredient getRepairMaterial() {
+    public Ingredient getRepairIngredient() {
         return repairMaterial.get();
     }
 
+    @OnlyIn(Dist.CLIENT)
     @Override
     public String getName() {
         return name;
@@ -73,10 +76,8 @@ public enum ModArmorTier implements IArmorMaterial {
         return toughness;
     }
 
-    @OnlyIn(Dist.CLIENT)
-
     @Override
-    public float func_230304_f_() {
+    public float getKnockbackResistance() {
         return 0;
     }
 }

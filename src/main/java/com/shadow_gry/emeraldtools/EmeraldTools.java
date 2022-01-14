@@ -41,7 +41,7 @@ public class EmeraldTools
     public static final ItemGroup TAB = new ItemGroup("emeraldToolsTab") {
 
         @Override
-        public ItemStack createIcon() {
+        public ItemStack makeIcon() {
             return new ItemStack(RegistryHandler.EMERALD_AXE.get());
         }
     };

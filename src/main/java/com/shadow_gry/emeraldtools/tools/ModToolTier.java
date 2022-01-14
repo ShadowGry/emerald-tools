@@ -10,7 +10,7 @@ public enum ModToolTier implements IItemTier {
 
     // TODO: Balance sample values.
     EMERALD(800, 7.0F, 3.0F, 3, 12, () -> {
-        return Ingredient.fromItems(Items.EMERALD);
+        return Ingredient.of(Items.EMERALD);
     });
 
     private int maxUses;
@@ -30,32 +30,32 @@ public enum ModToolTier implements IItemTier {
     }
 
     @Override
-    public int getMaxUses() {
+    public int getUses() {
         return maxUses;
     }
 
     @Override
-    public float getEfficiency() {
+    public float getSpeed() {
         return efficiency;
     }
 
     @Override
-    public float getAttackDamage() {
+    public float getAttackDamageBonus() {
         return attackDamage;
     }
 
     @Override
-    public int getHarvestLevel() {
+    public int getLevel() {
         return harvestLevel;
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
         return enchantability;
     }
 
     @Override
-    public Ingredient getRepairMaterial() {
+    public Ingredient getRepairIngredient() {
         return repairMaterial.get();
     }
 }
