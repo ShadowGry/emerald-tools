@@ -3,12 +3,19 @@ package com.shadow_gry.emeraldtools.util;
 import com.shadow_gry.emeraldtools.EmeraldTools;
 import com.shadow_gry.emeraldtools.armor.ModArmorTier;
 import com.shadow_gry.emeraldtools.tools.ModToolTier;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.SwordItem;
 
 public class RegistryHandler {
 
@@ -36,14 +43,14 @@ public class RegistryHandler {
 
     // Armor
     public static final RegistryObject<ArmorItem> EMERALD_HELMET = ITEMS.register("emerald_helmet", () ->
-            new ArmorItem(ModArmorTier.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().tab(EmeraldTools.TAB)));
+            new ArmorItem(ModArmorTier.EMERALD, EquipmentSlot.HEAD, new Item.Properties().tab(EmeraldTools.TAB)));
 
     public static final RegistryObject<ArmorItem> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () ->
-            new ArmorItem(ModArmorTier.EMERALD, EquipmentSlotType.CHEST, new Item.Properties().tab(EmeraldTools.TAB)));
+            new ArmorItem(ModArmorTier.EMERALD, EquipmentSlot.CHEST, new Item.Properties().tab(EmeraldTools.TAB)));
 
     public static final RegistryObject<ArmorItem> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () ->
-            new ArmorItem(ModArmorTier.EMERALD, EquipmentSlotType.LEGS, new Item.Properties().tab(EmeraldTools.TAB)));
+            new ArmorItem(ModArmorTier.EMERALD, EquipmentSlot.LEGS, new Item.Properties().tab(EmeraldTools.TAB)));
 
     public static final RegistryObject<ArmorItem> EMERALD_BOOTS = ITEMS.register("emerald_boots", () ->
-            new ArmorItem(ModArmorTier.EMERALD, EquipmentSlotType.FEET, new Item.Properties().tab(EmeraldTools.TAB)));
+            new ArmorItem(ModArmorTier.EMERALD, EquipmentSlot.FEET, new Item.Properties().tab(EmeraldTools.TAB)));
 }

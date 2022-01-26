@@ -1,12 +1,12 @@
 package com.shadow_gry.emeraldtools.tools;
 
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum ModToolTier implements IItemTier {
+public enum ModToolTier implements Tier {
 
     // TODO: Balance sample values.
     EMERALD(800, 7.0F, 3.0F, 3, 12, () -> {
