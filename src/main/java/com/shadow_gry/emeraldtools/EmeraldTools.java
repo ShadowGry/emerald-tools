@@ -2,6 +2,7 @@ package com.shadow_gry.emeraldtools;
 
 import com.shadow_gry.emeraldtools.util.RegistryHandler;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -12,7 +13,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("emeraldtools")
+@Mod(EmeraldTools.MOD_ID)
 public class EmeraldTools
 {
     // Directly reference a log4j logger.
@@ -38,7 +39,7 @@ public class EmeraldTools
     private void doClientStuff(final FMLClientSetupEvent event) {
     }
 
-    public static final CreativeModeTab TAB = new CreativeModeTab("emeraldToolsTab") {
+    public static final CreativeModeTab TAB_EMERALD_TOOLS = new CreativeModeTab("emerald_tools") {
 
         @Override
         public ItemStack makeIcon() {

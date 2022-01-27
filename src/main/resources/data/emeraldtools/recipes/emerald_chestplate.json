@@ -1,21 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern":
-  [
-    "e e",
-    "eee",
-    "eee"
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
   ],
-  "key":
-  {
-    "e":
-    {
+  "key": {
+    "X": {
       "item": "minecraft:emerald"
     }
   },
-  "result":
-  {
-    "item": "emeraldtools:emerald_chestplate",
-    "count": 1
+  "result": {
+    "item": "emeraldtools:emerald_chestplate"
   }
 }

@@ -16,27 +16,27 @@ public enum ModArmorTier implements ArmorMaterial {
 
     // TODO: Balance sample values.
     EMERALD(25, new int[] {2, 5, 6, 2}, 18, SoundEvents.ARMOR_EQUIP_GENERIC,
-            EmeraldTools.MOD_ID + ":emerald", 0.0F, () -> {return Ingredient.of(Items.EMERALD); }, 0);
+            EmeraldTools.MOD_ID + ":emerald", 0.0F, () -> Ingredient.of(Items.EMERALD), 0);
 
     private static int[] MAX_DAMAGE = new int[] {11, 16, 15, 13};
     private int maxDamageFactor;
     private int[] damageReductionAmount;
-    private int enchantability;
-    private SoundEvent soundEvent;
+    private int enchantmentValue;
+    private SoundEvent equipSound;
     private String name;
     private float toughness;
-    private Supplier<Ingredient> repairMaterial;
+    private Supplier<Ingredient> repairIngredient;
     private float knockbackResistance;
 
-    ModArmorTier(int maxDamageFactor, int[] damageReductionAmount, int enchantability, SoundEvent soundEvent,
-                 String name, float toughness, Supplier<Ingredient> repairMaterial, float knockbackResistance) {
+    ModArmorTier(int maxDamageFactor, int[] damageReductionAmount, int enchantmentValue, SoundEvent equipSound,
+                 String name, float toughness, Supplier<Ingredient> repairIngredient, float knockbackResistance) {
         this.maxDamageFactor = maxDamageFactor;
         this.damageReductionAmount = damageReductionAmount;
-        this.enchantability = enchantability;
-        this.soundEvent = soundEvent;
+        this.enchantmentValue = enchantmentValue;
+        this.equipSound = equipSound;
         this.name = name;
         this.toughness = toughness;
-        this.repairMaterial = repairMaterial;
+        this.repairIngredient = repairIngredient;
         this.knockbackResistance = knockbackResistance;
     }
 
@@ -52,17 +52,17 @@ public enum ModArmorTier implements ArmorMaterial {
 
     @Override
     public int getEnchantmentValue() {
-        return enchantability;
+        return enchantmentValue;
     }
 
     @Override
     public SoundEvent getEquipSound() {
-        return soundEvent;
+        return equipSound;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return repairMaterial.get();
+        return repairIngredient.get();
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -78,6 +78,6 @@ public enum ModArmorTier implements ArmorMaterial {
 
     @Override
     public float getKnockbackResistance() {
-        return 0;
+        return knockbackResistance;
     }
 }
