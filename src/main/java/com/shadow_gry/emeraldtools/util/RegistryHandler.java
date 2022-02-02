@@ -42,21 +42,20 @@ public class RegistryHandler {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
-    // TODO: Balance sample values.
     public static final RegistryObject<ShovelItem> EMERALD_SHOVEL = ITEMS.register("emerald_shovel", () ->
-            new ShovelItem(ModToolTier.EMERALD, 0.5F, -3.0F, new Item.Properties().tab(EmeraldTools.TAB_EMERALD_TOOLS)));
+            new ShovelItem(ModToolTier.EMERALD, 1.5F, -3.0F, new Item.Properties().tab(EmeraldTools.TAB_EMERALD_TOOLS)));
 
     public static final RegistryObject<PickaxeItem> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () ->
-            new PickaxeItem(ModToolTier.EMERALD, 0, -2.8F, new Item.Properties().tab(EmeraldTools.TAB_EMERALD_TOOLS)));
+            new PickaxeItem(ModToolTier.EMERALD, 1, -2.8F, new Item.Properties().tab(EmeraldTools.TAB_EMERALD_TOOLS)));
 
     public static final RegistryObject<AxeItem> EMERALD_AXE = ITEMS.register("emerald_axe", () ->
-            new AxeItem(ModToolTier.EMERALD, 5, -3.1F, new Item.Properties().tab(EmeraldTools.TAB_EMERALD_TOOLS)));
+            new AxeItem(ModToolTier.EMERALD, 6.0F, -3.1F, new Item.Properties().tab(EmeraldTools.TAB_EMERALD_TOOLS)));
 
     public static final RegistryObject<HoeItem> EMERALD_HOE = ITEMS.register("emerald_hoe", () ->
-            new HoeItem(ModToolTier.EMERALD, -3, -1.0F, new Item.Properties().tab(EmeraldTools.TAB_EMERALD_TOOLS)));
+            new HoeItem(ModToolTier.EMERALD, -2, -1.0F, new Item.Properties().tab(EmeraldTools.TAB_EMERALD_TOOLS)));
 
     public static final RegistryObject<SwordItem> EMERALD_SWORD = ITEMS.register("emerald_sword", () ->
-            new SwordItem(ModToolTier.EMERALD, 2, -2.4F, new Item.Properties().tab(EmeraldTools.TAB_EMERALD_TOOLS)));
+            new SwordItem(ModToolTier.EMERALD, 3, -2.4F, new Item.Properties().tab(EmeraldTools.TAB_EMERALD_TOOLS)));
 
     // Armor
     public static final RegistryObject<ArmorItem> EMERALD_HELMET = ITEMS.register("emerald_helmet", () ->

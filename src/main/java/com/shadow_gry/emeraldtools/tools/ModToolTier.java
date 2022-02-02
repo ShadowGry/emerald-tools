@@ -24,7 +24,6 @@ import net.minecraftforge.common.Tags;
 
 public class ModToolTier {
 
-    // TODO: Balance sample values.
-    public static final ForgeTier EMERALD = new ForgeTier(3, 800, 7.0F, 3.0F, 12,
+    public static final ForgeTier EMERALD = new ForgeTier(3, 779, 7.0F, 2.5F, 12,
             Tags.Blocks.NEEDS_GOLD_TOOL, () -> Ingredient.of(Items.EMERALD));
 }

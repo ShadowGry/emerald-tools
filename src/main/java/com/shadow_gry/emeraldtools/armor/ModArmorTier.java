@@ -31,9 +31,8 @@ import java.util.function.Supplier;
 
 public enum ModArmorTier implements ArmorMaterial {
 
-    // TODO: Balance sample values.
-    EMERALD(25, new int[] {2, 5, 6, 2}, 18, SoundEvents.ARMOR_EQUIP_GENERIC,
-            EmeraldTools.MOD_ID + ":emerald", 0.0F, () -> Ingredient.of(Items.EMERALD), 0);
+    EMERALD(25, new int[] {2, 5, 6, 2}, 12, SoundEvents.ARMOR_EQUIP_GENERIC,
+            EmeraldTools.MOD_ID + ":emerald", 1.0F, () -> Ingredient.of(Items.EMERALD), 0.0F);
 
     private static int[] MAX_DAMAGE = new int[] {11, 16, 15, 13};
     private int maxDamageFactor;
