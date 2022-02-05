@@ -1,5 +1,5 @@
 # Emerald Tools
-![Version](https://img.shields.io/badge/version-1.17.1--0.1.0-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.18.1--0.1.0-blue?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/ShadowGry/emerald-tools?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/ShadowGry/emerald-tools?style=flat-square)
 
@@ -36,7 +36,7 @@ The emerald tier sits below the diamond tier because the villager career trading
 If you have the `JAR` file and only want to add the mod to the game, skip to Step 6. Otherwise, these instructions will show how to build it from source.
 
 ### Prerequisites
-It is assumed you have Java 16 JDK and 64-bit JVM already installed. For help, see the [Forge Documentation](https://mcforge.readthedocs.io/en/1.17.x/gettingstarted/) regarding the prerequisites, and also for additional information regarding the following steps.
+It is assumed you have Java 17 JDK and 64-bit JVM already installed. For help, see the [Forge Documentation](https://mcforge.readthedocs.io/en/1.17.x/gettingstarted/) regarding the prerequisites, and also for additional information regarding the following steps.
 
 ### Steps
 1. Clone this repository (or `Code > Download ZIP` and extract).

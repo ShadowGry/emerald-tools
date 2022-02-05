@@ -22,10 +22,9 @@ import com.shadow_gry.emeraldtools.armor.ModArmorTier;
 import com.shadow_gry.emeraldtools.tools.ModToolTier;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
+import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
