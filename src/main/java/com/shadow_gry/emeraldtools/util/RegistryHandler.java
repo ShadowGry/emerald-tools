@@ -28,6 +28,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.item.HorseArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
@@ -68,4 +69,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<ArmorItem> EMERALD_BOOTS = ITEMS.register("emerald_boots", () ->
             new ArmorItem(ModArmorTier.EMERALD, EquipmentSlot.FEET, new Item.Properties().tab(EmeraldTools.TAB_EMERALD_TOOLS)));
+
+    // Horse Armor
+    public static final RegistryObject<HorseArmorItem> EMERALD_HORSE_ARMOR = ITEMS.register("emerald_horse_armor", () ->
+            new HorseArmorItem(9, "emerald", new Item.Properties().stacksTo(1).tab(EmeraldTools.TAB_EMERALD_TOOLS)));
 }
