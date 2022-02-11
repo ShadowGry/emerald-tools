@@ -17,10 +17,11 @@ This mod adds in the following tools and armour into Minecraft:
 * Emerald Axe
 * Emerald Hoe
 * Emerald Sword
-* Elerald Helmet
+* Emerald Helmet
 * Emerald Chestplate
 * Emerald Leggings
 * Emerald Boots
+* Emerald Horse Armour
 
 ![Emerald tools tab](images/inventory.png)
 
@@ -28,7 +29,7 @@ Emerald tools and armour can be crafted just like other items in-game, but inste
 
 ![Crafting emerald axe](images/crafting_axe.png)
 
-The emerald tier (both tool and armour) sits between the iron and diamond tiers. Emerald tools have the same harvest level as diamond (level 3) and have a total durability of 779 uses.
+The emerald tier (both tool and armour) sits between the iron and diamond tiers. Emerald tools have the same harvest level as diamond (level 3) and have a total durability of 779 uses. Emerald horse armour provides 9 defense points.
 
 The emerald tier sits below the diamond tier because the villager career trading level, Expert (emerald badge), is below Master (diamond badge). Another reason is because they are easier to aquire through trading.
 
