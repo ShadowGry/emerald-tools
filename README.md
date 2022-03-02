@@ -1,5 +1,5 @@
 # Emerald Tools
-![Version](https://img.shields.io/badge/version-1.18.1--0.0.2.1-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.18.1--0.0.2.2-blue?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/ShadowGry/emerald-tools?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/ShadowGry/emerald-tools?style=flat-square)
 
