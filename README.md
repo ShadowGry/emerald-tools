@@ -5,7 +5,7 @@
 
 A Minecraft mod that adds in emerald tools and armour using Forge.
 
-![Steve wearing emerald armour](images/steve_wearing_armour.png)
+![Steve wearing emerald armour](https://drive.google.com/uc?id=1UzO6zpoPn2KUzzwG2ebjLJNOBsOOTyB2)
 
 In Minecraft, emeralds are exclusively used for trading. This mod gives them more uses, by being able to craft them into tools and armour, while keeping as much of a vanilla aspect.
 
@@ -22,11 +22,11 @@ This mod adds in the following tools and armour into Minecraft:
 * Emerald Leggings
 * Emerald Boots
 
-![Emerald tools tab](images/inventory.png)
+![Emerald tools tab](https://drive.google.com/uc?id=1wMbc66ulSdCMc6tYi2tfYozoOJzL1qRk)
 
 Emerald tools and armour can be crafted just like other items in-game, but instead with emeralds.
 
-![Crafting emerald axe](images/crafting_axe.png)
+![Crafting emerald axe](https://drive.google.com/uc?id=1MrQNUB9TZXh84RXtkEtRNSZSy_A5pSi_)
 
 The emerald tier (both tool and armour) sits between the iron and diamond tiers. Emerald tools have the same harvest level as diamond (level 3) and have a total durability of 779 uses.
 
