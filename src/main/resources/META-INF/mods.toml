@@ -11,11 +11,11 @@ issueTrackerURL="https://github.com/ShadowGry/emerald-tools/issues" #optional
 # The modid of the mod
 modId="emeraldtools" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="1.18.1-0.0.2.2" #mandatory
+version="1.18.1-0.0.2.3" #mandatory
 # A display name for the mod
 displayName="Emerald Tools" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
-#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+updateJSONURL="https://gist.githubusercontent.com/ShadowGry/c3b5f25415539302737ddbf173f113f3/raw/19cf923047664302e00951f34bd71112fef221ce/update.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
