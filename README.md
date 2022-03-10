@@ -77,6 +77,9 @@ which will output the mod in a `JAR` file in `build/libs`.
 7. Place the `JAR` inside the `.minecraft/mods` folder. If `mods` doesn't exist, create it.
 8. From the Minecraft launcher, switch to the newly create Forge profile, and play Minecraft. You can check that everything has been done correctly by clicking "Mods" from the main menu and seeing that "Emerald Tools" is listed on the left.
 
+## Updating
+[`update.json`](https://gist.github.com/ShadowGry/c3b5f25415539302737ddbf173f113f3) link.
+
 ## Acknolwedgements
 Early development of this mod began by following TechnoVision's 1.15/1.16 modding tutorials on [YouTube](https://www.youtube.com/playlist?list=PLDhiRTZ_vnoWsCqtoG1X1MbGY5xATTadb).
 
