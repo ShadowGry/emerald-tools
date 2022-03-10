@@ -7,10 +7,10 @@ A Minecraft mod that adds in emerald tools and armour using Forge.
 
 ![Steve wearing emerald armour](https://drive.google.com/uc?id=1MdUgS0dScTy2e5tjcqt4oEsjJAqS-Qgd)
 
-In Minecraft, emeralds are exclusively used for trading. This mod gives them more uses, by being able to craft them into tools and armour, while keeping as much of a vanilla aspect.
+In Minecraft, emeralds are exclusively used for trading. This mod gives them more uses by being able to craft them into tools and armour.
 
 ## What's New
-This mod adds in the following tools and armour into Minecraft:
+This mod adds in the following into Minecraft:
 
 * Emerald Shovel
 * Emerald Pickaxe
@@ -34,10 +34,10 @@ The emerald tier (both tool and armour) sits between the iron and diamond tiers.
 The emerald tier sits below the diamond tier because the villager career trading level, Expert (emerald badge), is below Master (diamond badge). Another reason is because they are easier to aquire through trading.
 
 ## Download and Installation
-If you have the `JAR` file and only want to add the mod to the game, skip to Step 6. Otherwise, these instructions will show how to build it from source.
+If you just want the `JAR` file, go to Releases and download for the version you want, and skip to Step 6. Otherwise, these instructions will show how to build it from source.
 
 ### Prerequisites
-It is assumed you have Java 17 JDK and 64-bit JVM already installed. For help, see the [Forge Documentation](https://mcforge.readthedocs.io/en/1.17.x/gettingstarted/) regarding the prerequisites, and also for additional information regarding the following steps.
+It is assumed you have Java 17 JDK and 64-bit JVM already installed. For help, see the [Forge Documentation](https://mcforge.readthedocs.io/en/1.18.x/gettingstarted/) regarding the prerequisites, and also for additional information regarding the following steps.
 
 ### Steps
 1. Clone this repository (or `Code > Download ZIP` and extract).
@@ -73,7 +73,7 @@ which will launch Minecraft, however this meant for development only.
 ```
 which will output the mod in a `JAR` file in `build/libs`.
 
-6. Download and run the latest version of the [Forge Installer](https://files.minecraftforge.net/net/minecraftforge/forge/index_1.17.1.html).
+6. Download and run the latest version of the [Forge Installer](https://files.minecraftforge.net/net/minecraftforge/forge/).
 7. Place the `JAR` inside the `.minecraft/mods` folder. If `mods` doesn't exist, create it.
 8. From the Minecraft launcher, switch to the newly create Forge profile, and play Minecraft. You can check that everything has been done correctly by clicking "Mods" from the main menu and seeing that "Emerald Tools" is listed on the left.
 

@@ -17,7 +17,7 @@ displayName="Emerald Tools" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
 updateJSONURL="https://gist.githubusercontent.com/ShadowGry/c3b5f25415539302737ddbf173f113f3/raw/19cf923047664302e00951f34bd71112fef221ce/update.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+displayURL="https://github.com/ShadowGry/emerald-tools" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
 #logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
@@ -26,9 +26,7 @@ credits="TechnoVision" #optional
 authors="Shadow_Gry" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-A Minecraft mod that adds in emerald tools and armour using Forge.
-
-In Minecraft, emeralds are exclusively used for trading. This mod gives them more uses, by being able to craft them into tools and armour, while keeping as much of a vanilla aspect.
+Adds emerald tools and armour.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.emeraldtools]] #optional
