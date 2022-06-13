@@ -1,6 +1,6 @@
 /*
  * This file is part of Emerald Tools.
- * Copyright (C) 2022  Shadow_Gry
+ * Copyright (C) 2022  ShadowGry
  *
  * Emerald Tools is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,24 +15,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package com.shadow_gry.emeraldtools;
+package com.github.shadowgry.emeraldtools;
 
-import com.shadow_gry.emeraldtools.util.RegistryHandler;
+import com.github.shadowgry.emeraldtools.common.items.ModItems;
+
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(EmeraldTools.MOD_ID)
 public class EmeraldTools
 {
     public static final String MOD_ID = "emeraldtools";
 
     public EmeraldTools() {
-        RegistryHandler.init();
-
-        // Register ourselves for server and other game events we are interested in
+        ModItems.registerItems();
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -40,7 +38,7 @@ public class EmeraldTools
 
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(RegistryHandler.EMERALD_AXE.get());
+            return new ItemStack(ModItems.EMERALD_AXE.get());
         }
     };
 }
