@@ -1,5 +1,5 @@
 # Emerald Tools
-![Version](https://img.shields.io/badge/version-1.18.1--1.0.0.0-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.18.2--1.1.0.0-blue?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/ShadowGry/emerald-tools?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/ShadowGry/emerald-tools?style=flat-square)
 
@@ -84,4 +84,4 @@ which will output the mod in a `JAR` file in `build/libs`.
 Early development of this mod began by following TechnoVision's 1.15/1.16 modding tutorials on [YouTube](https://www.youtube.com/playlist?list=PLDhiRTZ_vnoWsCqtoG1X1MbGY5xATTadb).
 
 ## License
-Copyright (C) 2022 Shadow_Gry. See [COPYING](COPYING) for more details.
+Copyright (C) 2022 ShadowGry. See [COPYING](COPYING) for more details.

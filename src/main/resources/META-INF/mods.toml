@@ -1,50 +1,32 @@
-# The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
-modLoader="javafml" #mandatory
-# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[39,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
-# The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
-license="GPL-3.0"
-# A URL to refer people to when problems occur with this mod
-issueTrackerURL="https://github.com/ShadowGry/emerald-tools/issues" #optional
-# A list of mods - how many allowed here is determined by the individual mod loader
-[[mods]] #mandatory
-# The modid of the mod
-modId="emeraldtools" #mandatory
-# The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="1.18.1-1.0.0.0" #mandatory
-# A display name for the mod
-displayName="Emerald Tools" #mandatory
-# A URL to query for updates for this mod. See the JSON update specification <here>
-updateJSONURL="https://gist.githubusercontent.com/ShadowGry/c3b5f25415539302737ddbf173f113f3/raw/19cf923047664302e00951f34bd71112fef221ce/update.json" #optional
-# A URL for the "homepage" for this mod, displayed in the mod UI
-displayURL="https://github.com/ShadowGry/emerald-tools" #optional
-# A file name (in the root of the mod JAR) containing a logo for display
-#logoFile="examplemod.png" #optional
-# A text field displayed in the mod UI
-credits="TechnoVision" #optional
-# A text field displayed in the mod UI
-authors="Shadow_Gry" #optional
-# The description text for the mod (multi line!) (#mandatory)
-description='''
-Adds emerald tools and armour.
-'''
-# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.emeraldtools]] #optional
-    # the modid of the dependency
-    modId="forge" #mandatory
-    # Does this dependency have to exist - if not, ordering below must be specified
-    mandatory=true #mandatory
-    # The version range of the dependency
-    versionRange="[39,)" #mandatory
-    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
-    ordering="NONE"
-    # Side this dependency is applied on - BOTH, CLIENT or SERVER
-    side="BOTH"
-# Here's another dependency
-[[dependencies.emeraldtools]]
-    modId="minecraft"
-    mandatory=true
-    # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="[1.18.1,1.19)"
-    ordering="NONE"
-    side="BOTH"
+# Non-Mod-Specific Properties
+modLoader = "javafml"
+loaderVersion = "[40,)"
+license = "GNU General Public License v3.0"
+issueTrackerURL="https://github.com/ShadowGry/emerald-tools/issues"
+
+# Mod Properties
+[[mods]]
+    modId = "emeraldtools"
+    version = "${file.jarVersion}"
+    displayName = "Emerald Tools"
+    updateJSONURL = "https://gist.githubusercontent.com/ShadowGry/c3b5f25415539302737ddbf173f113f3/raw"
+    displayURL = "https://github.com/ShadowGry/emerald-tools"
+    # logoFile = ""
+    credits = "TechnoVision"
+    authors = "ShadowGry"
+    description = "Adds emerald tools and armor."
+
+# Dependency Configurations
+[[dependencies.coppertools]]
+    modId = "forge"
+    mandatory = true
+    versionRange = "[40,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.coppertools]]
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.18.2,1.19)"
+    ordering = "NONE"
+    side = "BOTH"
