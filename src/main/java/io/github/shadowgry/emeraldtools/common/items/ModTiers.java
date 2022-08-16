@@ -15,30 +15,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package com.github.shadowgry.emeraldtools;
+package io.github.shadowgry.emeraldtools.common.items;
 
-import com.github.shadowgry.emeraldtools.common.items.ModItems;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraftforge.common.ForgeTier;
+import net.minecraftforge.common.Tags;
 
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.Mod;
-
-@Mod(EmeraldTools.MOD_ID)
-public class EmeraldTools
-{
-	public static final String MOD_ID = "emeraldtools";
-	
-	public EmeraldTools() {
-		ModItems.registerItems();
-		MinecraftForge.EVENT_BUS.register(this);
-	}
-	
-	public static final CreativeModeTab TAB_EMERALD_TOOLS = new CreativeModeTab("emerald_tools") {
-		
-		@Override
-		public ItemStack makeIcon() {
-			return new ItemStack(ModItems.EMERALD_AXE.get());
-		}
-	};
+public class ModTiers {
+	public static final ForgeTier EMERALD = new ForgeTier(3, 779, 7.0F, 2.5F, 12, Tags.Blocks.NEEDS_GOLD_TOOL, () -> {
+		return Ingredient.of(Items.EMERALD);
+	});
 }

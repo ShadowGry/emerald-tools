@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package com.github.shadowgry.emeraldtools.common.items;
+package io.github.shadowgry.emeraldtools.common.items;
 
-import com.github.shadowgry.emeraldtools.EmeraldTools;
+import io.github.shadowgry.emeraldtools.EmeraldTools;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
