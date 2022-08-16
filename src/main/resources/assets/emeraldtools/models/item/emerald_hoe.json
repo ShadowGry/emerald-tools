@@ -1,6 +1,6 @@
 {
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "emeraldtools:items/emerald_hoe"
-  }
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "emeraldtools:items/emerald_hoe"
+	}
 }

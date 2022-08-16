@@ -23,7 +23,7 @@ import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.Tags;
 
 public class ModTiers {
-    public static final ForgeTier EMERALD = new ForgeTier(3, 779, 7.0F, 2.5F, 12, Tags.Blocks.NEEDS_GOLD_TOOL, () -> {
-        return Ingredient.of(Items.EMERALD);
-    });
+	public static final ForgeTier EMERALD = new ForgeTier(3, 779, 7.0F, 2.5F, 12, Tags.Blocks.NEEDS_GOLD_TOOL, () -> {
+		return Ingredient.of(Items.EMERALD);
+	});
 }

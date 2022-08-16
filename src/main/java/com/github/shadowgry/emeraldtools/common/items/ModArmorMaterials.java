@@ -28,72 +28,72 @@ import net.minecraft.sounds.SoundEvents;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    EMERALD(25, new int[] {2, 5, 6, 2}, 12, SoundEvents.ARMOR_EQUIP_DIAMOND,
-            EmeraldTools.MOD_ID + ":emerald", 1.0F, () -> {
-                return Ingredient.of(Items.EMERALD);
-            },
-            0.0F
-    );
-
-    private static int[] MAX_DAMAGE = new int[] {11, 16, 15, 13};
-    private int maxDamageFactor;
-    private int[] damageReductionAmount;
-    private int enchantmentValue;
-    private SoundEvent equipSound;
-    private String name;
-    private float toughness;
-    private Supplier<Ingredient> repairIngredient;
-    private float knockbackResistance;
-
-    ModArmorMaterials(int maxDamageFactor, int[] damageReductionAmount, int enchantmentValue, SoundEvent equipSound,
-                 String name, float toughness, Supplier<Ingredient> repairIngredient, float knockbackResistance) {
-        this.maxDamageFactor = maxDamageFactor;
-        this.damageReductionAmount = damageReductionAmount;
-        this.enchantmentValue = enchantmentValue;
-        this.equipSound = equipSound;
-        this.name = name;
-        this.toughness = toughness;
-        this.repairIngredient = repairIngredient;
-        this.knockbackResistance = knockbackResistance;
-    }
-
-    @Override
-    public int getDurabilityForSlot(EquipmentSlot slotIn) {
-        return MAX_DAMAGE[slotIn.getIndex()] * maxDamageFactor;
-    }
-
-    @Override
-    public int getDefenseForSlot(EquipmentSlot slotIn) {
-        return damageReductionAmount[slotIn.getIndex()];
-    }
-
-    @Override
-    public int getEnchantmentValue() {
-        return enchantmentValue;
-    }
-
-    @Override
-    public SoundEvent getEquipSound() {
-        return equipSound;
-    }
-
-    @Override
-    public Ingredient getRepairIngredient() {
-        return repairIngredient.get();
-    }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public float getToughness() {
-        return toughness;
-    }
-
-    @Override
-    public float getKnockbackResistance() {
-        return knockbackResistance;
-    }
+	EMERALD(25, new int[] {2, 5, 6, 2}, 12, SoundEvents.ARMOR_EQUIP_DIAMOND,
+			EmeraldTools.MOD_ID + ":emerald", 1.0F, () -> {
+				return Ingredient.of(Items.EMERALD);
+			},
+			0.0F
+	);
+	
+	private static int[] MAX_DAMAGE = new int[] {11, 16, 15, 13};
+	private int maxDamageFactor;
+	private int[] damageReductionAmount;
+	private int enchantmentValue;
+	private SoundEvent equipSound;
+	private String name;
+	private float toughness;
+	private Supplier<Ingredient> repairIngredient;
+	private float knockbackResistance;
+	
+	ModArmorMaterials(int maxDamageFactor, int[] damageReductionAmount, int enchantmentValue, SoundEvent equipSound,
+				 String name, float toughness, Supplier<Ingredient> repairIngredient, float knockbackResistance) {
+		this.maxDamageFactor = maxDamageFactor;
+		this.damageReductionAmount = damageReductionAmount;
+		this.enchantmentValue = enchantmentValue;
+		this.equipSound = equipSound;
+		this.name = name;
+		this.toughness = toughness;
+		this.repairIngredient = repairIngredient;
+		this.knockbackResistance = knockbackResistance;
+	}
+	
+	@Override
+	public int getDurabilityForSlot(EquipmentSlot slotIn) {
+		return MAX_DAMAGE[slotIn.getIndex()] * maxDamageFactor;
+	}
+	
+	@Override
+	public int getDefenseForSlot(EquipmentSlot slotIn) {
+		return damageReductionAmount[slotIn.getIndex()];
+	}
+	
+	@Override
+	public int getEnchantmentValue() {
+		return enchantmentValue;
+	}
+	
+	@Override
+	public SoundEvent getEquipSound() {
+		return equipSound;
+	}
+	
+	@Override
+	public Ingredient getRepairIngredient() {
+		return repairIngredient.get();
+	}
+	
+	@Override
+	public String getName() {
+		return name;
+	}
+	
+	@Override
+	public float getToughness() {
+		return toughness;
+	}
+	
+	@Override
+	public float getKnockbackResistance() {
+		return knockbackResistance;
+	}
 }

@@ -1,19 +1,19 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "XX",
-    "X#",
-    " #"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
-      "item": "minecraft:emerald"
-    }
-  },
-  "result": {
-    "item": "emeraldtools:emerald_axe"
-  }
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"XX",
+		"X#",
+		" #"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:stick"
+		},
+		"X": {
+			"item": "minecraft:emerald"
+		}
+	},
+	"result": {
+		"item": "emeraldtools:emerald_axe"
+	}
 }

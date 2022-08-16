@@ -27,18 +27,18 @@ import net.minecraftforge.fml.common.Mod;
 @Mod(EmeraldTools.MOD_ID)
 public class EmeraldTools
 {
-    public static final String MOD_ID = "emeraldtools";
-
-    public EmeraldTools() {
-        ModItems.registerItems();
-        MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    public static final CreativeModeTab TAB_EMERALD_TOOLS = new CreativeModeTab("emerald_tools") {
-
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(ModItems.EMERALD_AXE.get());
-        }
-    };
+	public static final String MOD_ID = "emeraldtools";
+	
+	public EmeraldTools() {
+		ModItems.registerItems();
+		MinecraftForge.EVENT_BUS.register(this);
+	}
+	
+	public static final CreativeModeTab TAB_EMERALD_TOOLS = new CreativeModeTab("emerald_tools") {
+		
+		@Override
+		public ItemStack makeIcon() {
+			return new ItemStack(ModItems.EMERALD_AXE.get());
+		}
+	};
 }

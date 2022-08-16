@@ -1,19 +1,19 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "XX",
-    " #",
-    " #"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
-      "item": "minecraft:emerald"
-    }
-  },
-  "result": {
-    "item": "emeraldtools:emerald_hoe"
-  }
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"XX",
+		" #",
+		" #"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:stick"
+		},
+		"X": {
+			"item": "minecraft:emerald"
+		}
+	},
+	"result": {
+		"item": "emeraldtools:emerald_hoe"
+	}
 }

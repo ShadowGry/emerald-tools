@@ -1,13 +1,13 @@
 {
-  "itemGroup.emerald_tools": "Emerald Tools",
-  "item.emeraldtools.emerald_shovel": "Emerald Shovel",
-  "item.emeraldtools.emerald_pickaxe": "Emerald Pickaxe",
-  "item.emeraldtools.emerald_axe": "Emerald Axe",
-  "item.emeraldtools.emerald_hoe": "Emerald Hoe",
-  "item.emeraldtools.emerald_sword": "Emerald Sword",
-  "item.emeraldtools.emerald_helmet": "Emerald Helmet",
-  "item.emeraldtools.emerald_chestplate": "Emerald Chestplate",
-  "item.emeraldtools.emerald_leggings": "Emerald Leggings",
-  "item.emeraldtools.emerald_boots": "Emerald Boots",
-  "item.emeraldtools.emerald_horse_armor": "Emerald Horse Armor"
+	"itemGroup.emerald_tools": "Emerald Tools",
+	"item.emeraldtools.emerald_shovel": "Emerald Shovel",
+	"item.emeraldtools.emerald_pickaxe": "Emerald Pickaxe",
+	"item.emeraldtools.emerald_axe": "Emerald Axe",
+	"item.emeraldtools.emerald_hoe": "Emerald Hoe",
+	"item.emeraldtools.emerald_sword": "Emerald Sword",
+	"item.emeraldtools.emerald_helmet": "Emerald Helmet",
+	"item.emeraldtools.emerald_chestplate": "Emerald Chestplate",
+	"item.emeraldtools.emerald_leggings": "Emerald Leggings",
+	"item.emeraldtools.emerald_boots": "Emerald Boots",
+	"item.emeraldtools.emerald_horse_armor": "Emerald Horse Armor"
 }

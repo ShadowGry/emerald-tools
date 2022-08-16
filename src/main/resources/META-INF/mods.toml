@@ -6,27 +6,27 @@ issueTrackerURL="https://github.com/ShadowGry/emerald-tools/issues"
 
 # Mod Properties
 [[mods]]
-    modId = "emeraldtools"
-    version = "${file.jarVersion}"
-    displayName = "Emerald Tools"
-    updateJSONURL = "https://gist.githubusercontent.com/ShadowGry/c3b5f25415539302737ddbf173f113f3/raw"
-    displayURL = "https://github.com/ShadowGry/emerald-tools"
-    # logoFile = ""
-    credits = "TechnoVision"
-    authors = "ShadowGry"
-    description = "Adds emerald tools and armor."
+	modId = "emeraldtools"
+	version = "${file.jarVersion}"
+	displayName = "Emerald Tools"
+	updateJSONURL = "https://gist.githubusercontent.com/ShadowGry/c3b5f25415539302737ddbf173f113f3/raw"
+	displayURL = "https://github.com/ShadowGry/emerald-tools"
+	# logoFile = ""
+	credits = "TechnoVision"
+	authors = "ShadowGry"
+	description = "Adds emerald tools and armor."
 
 # Dependency Configurations
 [[dependencies.coppertools]]
-    modId = "forge"
-    mandatory = true
-    versionRange = "[40,)"
-    ordering = "NONE"
-    side = "BOTH"
+	modId = "forge"
+	mandatory = true
+	versionRange = "[40,)"
+	ordering = "NONE"
+	side = "BOTH"
 
 [[dependencies.coppertools]]
-    modId = "minecraft"
-    mandatory = true
-    versionRange = "[1.18.2,1.19)"
-    ordering = "NONE"
-    side = "BOTH"
+	modId = "minecraft"
+	mandatory = true
+	versionRange = "[1.18.2,1.19)"
+	ordering = "NONE"
+	side = "BOTH"
