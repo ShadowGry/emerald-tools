@@ -1,7 +1,6 @@
 # Emerald Tools
-![Version](https://img.shields.io/badge/version-1.18.2--1.1.0.0-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.19--1.1.0.0-blue?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/ShadowGry/emerald-tools?style=flat-square)
-![GitHub repo size](https://img.shields.io/github/repo-size/ShadowGry/emerald-tools?style=flat-square)
 
 A Minecraft mod that adds in emerald tools and armour using Forge.
 
