@@ -80,4 +80,4 @@ which will output the mod in a `JAR` file in `build/libs`.
 Early development of this mod began by following TechnoVision's 1.15/1.16 modding tutorials on [YouTube](https://www.youtube.com/playlist?list=PLDhiRTZ_vnoWsCqtoG1X1MbGY5xATTadb).
 
 ## License
-Copyright (C) 2022 ShadowGry. See [COPYING](COPYING) for more details.
+Copyright (C) 2022 ShadowGry. See [LICENSE](LICENSE) for more details.
