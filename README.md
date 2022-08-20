@@ -2,11 +2,11 @@
 ![Version](https://img.shields.io/badge/version-1.19.1--1.1.0.1-blue?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/ShadowGry/emerald-tools?style=flat-square)
 
-A Minecraft mod that adds in emerald tools and armour using Forge.
+A Minecraft mod that adds in emerald tools and armor using Forge.
 
-![Steve wearing emerald armour](https://drive.google.com/uc?id=1MdUgS0dScTy2e5tjcqt4oEsjJAqS-Qgd)
+![Steve wearing emerald armor](https://drive.google.com/uc?id=1i9KSMsVUJc53n0_7eUF9pRkWPdK7xdip)
 
-In Minecraft, emeralds are exclusively used for trading. This mod gives them more uses by being able to craft them into tools and armour.
+In Minecraft, emeralds are exclusively used for trading. This mod gives them more uses by being able to craft them into tools and armor.
 
 ## What's New
 This mod adds in the following into Minecraft:
@@ -20,15 +20,15 @@ This mod adds in the following into Minecraft:
 * Emerald Chestplate
 * Emerald Leggings
 * Emerald Boots
-* Emerald Horse Armour
+* Emerald Horse Armor
 
-![Emerald tools tab](https://drive.google.com/uc?id=1gSiDENno01liLm1CtsHii_Pi4Bdz3kQL)
+![Emerald tools tab](https://drive.google.com/uc?id=1RR4OOYMA9LqYA4PE2ufSuT93Qw3D_Hy4)
 
-Emerald tools and armour can be crafted just like other items in-game, but instead with emeralds.
+Emerald tools and armor can be crafted just like other items in-game, but instead with emeralds.
 
-![Crafting emerald axe](https://drive.google.com/uc?id=17DtlUjH2fueKr7RR6rOSnR5xhPPUQ2Su)
+![Emerald axe crafting recipe](https://drive.google.com/uc?id=1MGR64gw8gn9mgYJfuitmEgtxnmKzedau)
 
-The emerald tier (both tool and armour) sits between the iron and diamond tiers. Emerald tools have the same harvest level as diamond (level 3) and have a total durability of 779 uses. Emerald horse armour provides 9 defense points.
+The emerald tier (both tool and armor) sits between the iron and diamond tiers. Emerald tools have the same harvest level as diamond (level 3) and have a total durability of 779 uses. Emerald horse armor provides 9 defense points.
 
 The emerald tier sits below the diamond tier because the villager career trading level, Expert (emerald badge), is below Master (diamond badge). Another reason is because they are easier to aquire through trading.
 
@@ -36,7 +36,7 @@ The emerald tier sits below the diamond tier because the villager career trading
 If you just want the `JAR` file, go to Releases and download for the version you want, and skip to Step 6. Otherwise, these instructions will show how to build it from source.
 
 ### Prerequisites
-It is assumed you have Java 17 JDK and 64-bit JVM already installed. For help, see the [Forge Documentation](https://mcforge.readthedocs.io/en/1.18.x/gettingstarted/) regarding the prerequisites, and also for additional information regarding the following steps.
+It is assumed you have Java 17 JDK and 64-bit JVM already installed. For help, see the [Forge Documentation](https://docs.minecraftforge.net) regarding the prerequisites, and also for additional information regarding the following steps.
 
 ### Steps
 1. Clone this repository (or `Code > Download ZIP` and extract).
@@ -72,7 +72,7 @@ which will launch Minecraft, however this meant for development only.
 ```
 which will output the mod in a `JAR` file in `build/libs`.
 
-6. Download and run the latest version of the [Forge Installer](https://files.minecraftforge.net/net/minecraftforge/forge/).
+6. Download and run the latest version of the [Forge Installer](https://files.minecraftforge.net).
 7. Place the `JAR` inside the `.minecraft/mods` folder. If `mods` doesn't exist, create it.
 8. From the Minecraft launcher, switch to the newly create Forge profile, and play Minecraft. You can check that everything has been done correctly by clicking "Mods" from the main menu and seeing that "Emerald Tools" is listed on the left.
 
