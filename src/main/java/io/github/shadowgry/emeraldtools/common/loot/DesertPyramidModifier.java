@@ -38,7 +38,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class DesertPyramidModifier extends LootModifier {
 	
 	private final List<Item> items;
-	private final float chance;
+	private final double chance;
 	private final int size;
 	
 	public static final Supplier<Codec<DesertPyramidModifier>> CODEC = Suppliers.memoize(() ->
@@ -46,13 +46,13 @@ public class DesertPyramidModifier extends LootModifier {
 			inst -> codecStart(inst).and(
 				inst.group(
 					ForgeRegistries.ITEMS.getCodec().listOf().fieldOf("items").forGetter(m -> m.items),
-					Codec.FLOAT.fieldOf("chance").forGetter(m -> m.chance)
+					Codec.DOUBLE.fieldOf("chance").forGetter(m -> m.chance)
 				)
 			).apply(inst, DesertPyramidModifier::new)
 		)
 	);
 	
-	public DesertPyramidModifier(final LootItemCondition[] conditionsIn, List<Item> items, float chance) {
+	public DesertPyramidModifier(final LootItemCondition[] conditionsIn, List<Item> items, double chance) {
 		super(conditionsIn);
 		this.items = items;
 		this.size = items.size();
@@ -63,7 +63,7 @@ public class DesertPyramidModifier extends LootModifier {
 	@Override
 	protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
 		// Modify the loot and return the new drops
-		if(context.getRandom().nextFloat() < chance) {
+		if(context.getRandom().nextDouble() < chance) {
 			generatedLoot.add(items.get(context.getRandom().nextInt(size)).getDefaultInstance());
 		}
 		return generatedLoot;
