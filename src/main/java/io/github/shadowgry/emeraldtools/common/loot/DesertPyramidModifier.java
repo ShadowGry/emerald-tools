@@ -17,6 +17,8 @@
  */
 package io.github.shadowgry.emeraldtools.common.loot;
 
+import java.util.List;
+
 import org.jetbrains.annotations.NotNull;
 
 import com.google.common.base.Supplier;
@@ -35,31 +37,35 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class DesertPyramidModifier extends LootModifier {
 	
-	private final Item item;
-	private final int weight;
+	private final List<Item> items;
+	private final float chance;
+	private final int size;
 	
 	public static final Supplier<Codec<DesertPyramidModifier>> CODEC = Suppliers.memoize(() ->
 		RecordCodecBuilder.create(
 			inst -> codecStart(inst).and(
 				inst.group(
-					ForgeRegistries.ITEMS.getCodec().fieldOf("item").forGetter(m -> m.item),
-					Codec.INT.fieldOf("weight").forGetter(m -> m.weight)
+					ForgeRegistries.ITEMS.getCodec().listOf().fieldOf("items").forGetter(m -> m.items),
+					Codec.FLOAT.fieldOf("chance").forGetter(m -> m.chance)
 				)
 			).apply(inst, DesertPyramidModifier::new)
 		)
 	);
 	
-	public DesertPyramidModifier(final LootItemCondition[] conditionsIn, Item item, int weight) {
+	public DesertPyramidModifier(final LootItemCondition[] conditionsIn, List<Item> items, float chance) {
 		super(conditionsIn);
-		this.item = item;
-		this.weight = weight;
+		this.items = items;
+		this.size = items.size();
+		this.chance = chance;
 	}
 	
 	@NotNull
 	@Override
 	protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
 		// Modify the loot and return the new drops
-		generatedLoot.add(item.getDefaultInstance());
+		if(context.getRandom().nextFloat() < chance) {
+			generatedLoot.add(items.get(context.getRandom().nextInt(size)).getDefaultInstance());
+		}
 		return generatedLoot;
 	}
 	

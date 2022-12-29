@@ -7,6 +7,10 @@
 		}
 	],
 	
-	"item": "emeraldtools:emerald_horse_armor",
-	"weight": 10
+	"items": [
+		"emeraldtools:emerald_horse_armor",
+		"emeraldtools:emerald_sword",
+		"emeraldtools:emerald_chestplate"
+	],
+	"chance": 0.5
 }
