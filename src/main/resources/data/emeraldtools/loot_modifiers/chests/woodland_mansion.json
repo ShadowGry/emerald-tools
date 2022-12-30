@@ -1,5 +1,5 @@
 {
-	"type": "emeraldtools:add_item",
+	"type": "emeraldtools:add_chest_item",
 	"conditions": [
 		{
 			"condition": "forge:loot_table_id",

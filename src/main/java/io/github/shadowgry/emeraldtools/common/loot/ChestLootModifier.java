@@ -35,24 +35,24 @@ import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.common.loot.LootModifier;
 import net.minecraftforge.registries.ForgeRegistries;
 
-public class DesertPyramidModifier extends LootModifier {
+public class ChestLootModifier extends LootModifier {
 	
 	private final List<Item> items;
 	private final double chance;
 	private final int size;
 	
-	public static final Supplier<Codec<DesertPyramidModifier>> CODEC = Suppliers.memoize(() ->
+	public static final Supplier<Codec<ChestLootModifier>> CODEC = Suppliers.memoize(() ->
 		RecordCodecBuilder.create(
 			inst -> codecStart(inst).and(
 				inst.group(
 					ForgeRegistries.ITEMS.getCodec().listOf().fieldOf("items").forGetter(m -> m.items),
 					Codec.DOUBLE.fieldOf("chance").forGetter(m -> m.chance)
 				)
-			).apply(inst, DesertPyramidModifier::new)
+			).apply(inst, ChestLootModifier::new)
 		)
 	);
 	
-	public DesertPyramidModifier(final LootItemCondition[] conditionsIn, List<Item> items, double chance) {
+	public ChestLootModifier(final LootItemCondition[] conditionsIn, List<Item> items, double chance) {
 		super(conditionsIn);
 		this.items = items;
 		this.size = items.size();
