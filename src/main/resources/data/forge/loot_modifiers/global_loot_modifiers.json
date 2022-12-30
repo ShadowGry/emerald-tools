@@ -1,0 +1,14 @@
+{
+	"replace": false,
+	"entries": [
+		"emeraldtools:chests/ancient_city",
+		"emeraldtools:chests/desert_pyramid",
+		"emeraldtools:chests/end_city_treasure",
+		"emeraldtools:chests/jungle_temple",
+		"emeraldtools:chests/nether_bridge",
+		"emeraldtools:chests/simple_dungeon",
+		"emeraldtools:chests/stronghold_corridor",
+		"emeraldtools:chests/woodland_mansion",
+		"emeraldtools:chests/village/village_weaponsmith"
+	]
+}

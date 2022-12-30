@@ -1,0 +1,14 @@
+{
+	"type": "emeraldtools:add_chest_item",
+	"conditions": [
+		{
+			"condition": "forge:loot_table_id",
+			"loot_table_id": "minecraft:chests/desert_pyramid"
+		}
+	],
+	
+	"items": [
+		"emeraldtools:emerald_horse_armor"
+	],
+	"chance": 0.02155
+}

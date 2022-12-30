@@ -1,0 +1,14 @@
+{
+	"type": "emeraldtools:add_chest_item",
+	"conditions": [
+		{
+			"condition": "forge:loot_table_id",
+			"loot_table_id": "minecraft:chests/woodland_mansion"
+		}
+	],
+	
+	"items": [
+		"emeraldtools:emerald_chestplate"
+	],
+	"chance": 0.03937
+}
