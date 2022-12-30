@@ -1,0 +1,14 @@
+{
+	"type": "emeraldtools:add_item",
+	"conditions": [
+		{
+			"condition": "forge:loot_table_id",
+			"loot_table_id": "minecraft:chests/ancient_city"
+		}
+	],
+	
+	"items": [
+		"emeraldtools:emerald_leggings"
+	],
+	"chance": 0.02326
+}

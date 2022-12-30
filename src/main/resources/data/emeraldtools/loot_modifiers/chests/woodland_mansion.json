@@ -3,14 +3,12 @@
 	"conditions": [
 		{
 			"condition": "forge:loot_table_id",
-			"loot_table_id": "minecraft:chests/desert_pyramid"
+			"loot_table_id": "minecraft:chests/woodland_mansion"
 		}
 	],
 	
 	"items": [
-		"emeraldtools:emerald_horse_armor",
-		"emeraldtools:emerald_sword",
 		"emeraldtools:emerald_chestplate"
 	],
-	"chance": 0.5
+	"chance": 0.03937
 }

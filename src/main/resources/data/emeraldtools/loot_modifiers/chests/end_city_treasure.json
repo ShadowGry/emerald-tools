@@ -1,0 +1,21 @@
+{
+	"type": "emeraldtools:add_item",
+	"conditions": [
+		{
+			"condition": "forge:loot_table_id",
+			"loot_table_id": "minecraft:chests/end_city_treasure"
+		}
+	],
+	
+	"items": [
+		"emeraldtools:emerald_pickaxe",
+		"emeraldtools:emerald_shovel",
+		"emeraldtools:emerald_sword",
+		"emeraldtools:emerald_helmet",
+		"emeraldtools:emerald_chestplate",
+		"emeraldtools:emerald_leggings",
+		"emeraldtools:emerald_boots",
+		"emeraldtools:emerald_horse_armor"
+	],
+	"chance": 0.03529
+}
