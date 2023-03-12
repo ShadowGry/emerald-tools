@@ -1,6 +1,6 @@
 # Non-Mod-Specific Properties
 modLoader = "javafml"
-loaderVersion = "[42,)"
+loaderVersion = "[43,)"
 license = "GNU General Public License v3.0"
 issueTrackerURL="https://github.com/ShadowGry/emerald-tools/issues"
 
@@ -14,13 +14,14 @@ issueTrackerURL="https://github.com/ShadowGry/emerald-tools/issues"
 	# logoFile = ""
 	credits = "TechnoVision"
 	authors = "ShadowGry"
+	displayTest = "MATCH_VERSION"
 	description = "Adds emerald tools and armor."
 
 # Dependency Configurations
 [[dependencies.coppertools]]
 	modId = "forge"
 	mandatory = true
-	versionRange = "[42,)"
+	versionRange = "[43,)"
 	ordering = "NONE"
 	side = "BOTH"
 
