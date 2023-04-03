@@ -26,7 +26,7 @@ This mod adds in the following into Minecraft:
 
 Emerald tools and armor can be crafted just like other items in-game, but instead with emeralds.
 
-![Emerald axe crafting recipe](https://drive.google.com/uc?id=1MGR64gw8gn9mgYJfuitmEgtxnmKzedau)
+![Emerald pickaxe crafting recipe](https://drive.google.com/uc?id=1NBNxBQupBf9MIV-R7mvwnXQJUGDwCfNU)
 
 The emerald tier (both tool and armor) sits between the iron and diamond tiers. Emerald tools have the same harvest level as diamond (level 3) and have a total durability of 779 uses. Emerald horse armor provides 9 defense points.
 
