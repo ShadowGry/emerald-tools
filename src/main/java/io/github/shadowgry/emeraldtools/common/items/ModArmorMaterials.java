@@ -18,53 +18,63 @@
 package io.github.shadowgry.emeraldtools.common.items;
 
 import io.github.shadowgry.emeraldtools.EmeraldTools;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 
+import java.util.EnumMap;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-	EMERALD(25, new int[] {2, 5, 6, 2}, 12, SoundEvents.ARMOR_EQUIP_DIAMOND,
-			EmeraldTools.MOD_ID + ":emerald", 1.0F, () -> {
-				return Ingredient.of(Items.EMERALD);
-			},
-			0.0F
-	);
+	EMERALD("emerald", 25, Util.make(new EnumMap<>(ArmorItem.Type.class), (type) -> {
+		type.put(ArmorItem.Type.BOOTS, 2);
+		type.put(ArmorItem.Type.LEGGINGS, 5);
+		type.put(ArmorItem.Type.CHESTPLATE, 6);
+		type.put(ArmorItem.Type.HELMET, 2);
+	}), 12, SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, 0.0F, () -> {
+		return Ingredient.of(Items.EMERALD);
+	});
 	
-	private static int[] MAX_DAMAGE = new int[] {11, 16, 15, 13};
-	private int maxDamageFactor;
-	private int[] damageReductionAmount;
-	private int enchantmentValue;
-	private SoundEvent equipSound;
-	private String name;
-	private float toughness;
-	private Supplier<Ingredient> repairIngredient;
-	private float knockbackResistance;
+	private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap<>(ArmorItem.Type.class), (type) -> {
+		type.put(ArmorItem.Type.BOOTS, 13);
+		type.put(ArmorItem.Type.LEGGINGS, 15);
+		type.put(ArmorItem.Type.CHESTPLATE, 16);
+		type.put(ArmorItem.Type.HELMET, 11);
+	});
+	private final String name;
+	private final int durabilityMultiplier;
+	private final EnumMap<ArmorItem.Type, Integer> protectionFunctionForType;
+	private final int enchantmentValue;
+	private final SoundEvent sound;
+	private final float toughness;
+	private final float knockbackResistance;
+	private final Supplier<Ingredient> repairIngredient;
 	
-	ModArmorMaterials(int maxDamageFactor, int[] damageReductionAmount, int enchantmentValue, SoundEvent equipSound,
-				 String name, float toughness, Supplier<Ingredient> repairIngredient, float knockbackResistance) {
-		this.maxDamageFactor = maxDamageFactor;
-		this.damageReductionAmount = damageReductionAmount;
+	ModArmorMaterials(String name, int durabilityMultiplier, EnumMap<ArmorItem.Type, Integer> protectionFunctionForType,
+					  int enchantmentValue, SoundEvent sound, float toughness, float knockbackResistance,
+					  Supplier<Ingredient> repairIngredient) {
+		this.name = EmeraldTools.MOD_ID + ":" + name;
+		this.durabilityMultiplier = durabilityMultiplier;
+		this.protectionFunctionForType = protectionFunctionForType;
 		this.enchantmentValue = enchantmentValue;
-		this.equipSound = equipSound;
-		this.name = name;
+		this.sound = sound;
 		this.toughness = toughness;
-		this.repairIngredient = repairIngredient;
 		this.knockbackResistance = knockbackResistance;
+		this.repairIngredient = repairIngredient;
 	}
 	
 	@Override
-	public int getDurabilityForSlot(EquipmentSlot slotIn) {
-		return MAX_DAMAGE[slotIn.getIndex()] * maxDamageFactor;
+	public int getDurabilityForType(ArmorItem.Type type) {
+		return HEALTH_FUNCTION_FOR_TYPE.get(type) * durabilityMultiplier;
 	}
 	
 	@Override
-	public int getDefenseForSlot(EquipmentSlot slotIn) {
-		return damageReductionAmount[slotIn.getIndex()];
+	public int getDefenseForType(ArmorItem.Type type) {
+		return protectionFunctionForType.get(type);
 	}
 	
 	@Override
@@ -74,7 +84,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
 	
 	@Override
 	public SoundEvent getEquipSound() {
-		return equipSound;
+		return sound;
 	}
 	
 	@Override
