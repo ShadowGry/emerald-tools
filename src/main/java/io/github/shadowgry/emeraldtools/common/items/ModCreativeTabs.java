@@ -30,21 +30,21 @@ public class ModCreativeTabs {
 	@SubscribeEvent
 	static void buildContents(CreativeModeTabEvent.Register event) {
 		event.registerCreativeModeTab(new ResourceLocation(EmeraldTools.MOD_ID, "emeraldtools"), builder ->
-			builder.title(Component.translatable("itemGroup.emerald_tools"))
+			builder.title(Component.translatable("itemGroup" + EmeraldTools.MOD_ID + ".emerald_tools"))
 			.icon(() -> new ItemStack(ModItems.EMERALD_PICKAXE.get()))
-			.displayItems((enabledFlags, populator, hasPermissions) -> {
-				populator.accept(ModItems.EMERALD_SHOVEL.get());
-				populator.accept(ModItems.EMERALD_PICKAXE.get());
-				populator.accept(ModItems.EMERALD_AXE.get());
-				populator.accept(ModItems.EMERALD_HOE.get());
-				populator.accept(ModItems.EMERALD_SWORD.get());
+			.displayItems((params, output) -> {
+				output.accept(ModItems.EMERALD_SHOVEL.get());
+				output.accept(ModItems.EMERALD_PICKAXE.get());
+				output.accept(ModItems.EMERALD_AXE.get());
+				output.accept(ModItems.EMERALD_HOE.get());
+				output.accept(ModItems.EMERALD_SWORD.get());
 				
-				populator.accept(ModItems.EMERALD_HELMET.get());
-				populator.accept(ModItems.EMERALD_CHESTPLATE.get());
-				populator.accept(ModItems.EMERALD_LEGGINGS.get());
-				populator.accept(ModItems.EMERALD_BOOTS.get());
+				output.accept(ModItems.EMERALD_HELMET.get());
+				output.accept(ModItems.EMERALD_CHESTPLATE.get());
+				output.accept(ModItems.EMERALD_LEGGINGS.get());
+				output.accept(ModItems.EMERALD_BOOTS.get());
 				
-				populator.accept(ModItems.EMERALD_HORSE_ARMOR.get());
+				output.accept(ModItems.EMERALD_HORSE_ARMOR.get());
 			})
 		);
 	}
