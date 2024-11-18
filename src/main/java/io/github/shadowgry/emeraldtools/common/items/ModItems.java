@@ -19,7 +19,6 @@ package io.github.shadowgry.emeraldtools.common.items;
 
 import io.github.shadowgry.emeraldtools.EmeraldTools;
 
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -45,10 +44,10 @@ public class ModItems {
 	public static final RegistryObject<SwordItem>   EMERALD_SWORD   = ITEMS.register("emerald_sword",   () -> new SwordItem(  ModTiers.EMERALD,  3,    -2.4F, new Item.Properties()));
 	
 	// Emerald Armor
-	public static final RegistryObject<ArmorItem> EMERALD_HELMET     = ITEMS.register("emerald_helmet",     () -> new ArmorItem(ModArmorMaterials.EMERALD, EquipmentSlot.HEAD,  new Item.Properties()));
-	public static final RegistryObject<ArmorItem> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(ModArmorMaterials.EMERALD, EquipmentSlot.CHEST, new Item.Properties()));
-	public static final RegistryObject<ArmorItem> EMERALD_LEGGINGS   = ITEMS.register("emerald_leggings",   () -> new ArmorItem(ModArmorMaterials.EMERALD, EquipmentSlot.LEGS,  new Item.Properties()));
-	public static final RegistryObject<ArmorItem> EMERALD_BOOTS      = ITEMS.register("emerald_boots",      () -> new ArmorItem(ModArmorMaterials.EMERALD, EquipmentSlot.FEET,  new Item.Properties()));
+	public static final RegistryObject<ArmorItem> EMERALD_HELMET     = ITEMS.register("emerald_helmet",     () -> new ArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.HELMET,     new Item.Properties()));
+	public static final RegistryObject<ArmorItem> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+	public static final RegistryObject<ArmorItem> EMERALD_LEGGINGS   = ITEMS.register("emerald_leggings",   () -> new ArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.LEGGINGS,   new Item.Properties()));
+	public static final RegistryObject<ArmorItem> EMERALD_BOOTS      = ITEMS.register("emerald_boots",      () -> new ArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.BOOTS,      new Item.Properties()));
 	
 	// Emerald Horse Armor
 	public static final RegistryObject<HorseArmorItem> EMERALD_HORSE_ARMOR = ITEMS.register("emerald_horse_armor", () -> new HorseArmorItem(9, "emerald", new Item.Properties().stacksTo(1)));
