@@ -32,8 +32,8 @@ public class ModCreativeModeTabs {
 
 	private static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, EmeraldTools.MOD_ID);
 
-	public static final RegistryObject<CreativeModeTab> EMERALD_TOOLS = CREATIVE_MODE_TABS.register(EmeraldTools.MOD_ID, () -> CreativeModeTab.builder()
-		.title(Component.translatable("item_group" + EmeraldTools.MOD_ID + ".emerald_tools"))
+	public static final RegistryObject<CreativeModeTab> EMERALD_TOOLS = CREATIVE_MODE_TABS.register("emerald_tools_tab", () -> CreativeModeTab.builder()
+		.title(Component.translatable("item_group." + EmeraldTools.MOD_ID + ".emerald_tools_tab"))
 		.icon(() -> new ItemStack(ModItems.EMERALD_PICKAXE.get()))
 		.displayItems((params, output) -> {
 			output.accept(ModItems.EMERALD_SHOVEL.get());
