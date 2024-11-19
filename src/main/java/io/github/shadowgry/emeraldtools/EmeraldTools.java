@@ -17,10 +17,9 @@
  */
 package io.github.shadowgry.emeraldtools;
 
-import io.github.shadowgry.emeraldtools.common.items.ModCreativeTabs;
+import io.github.shadowgry.emeraldtools.common.items.ModCreativeModeTabs;
 import io.github.shadowgry.emeraldtools.common.items.ModItems;
 import io.github.shadowgry.emeraldtools.common.loot.ModLootModifiers;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod(EmeraldTools.MOD_ID)
@@ -30,7 +29,7 @@ public class EmeraldTools
 	
 	public EmeraldTools() {
 		ModItems.registerItems();
-		MinecraftForge.EVENT_BUS.register(ModCreativeTabs.class);
+		ModCreativeModeTabs.register();
 		ModLootModifiers.registerModifiers();
 	}
 }
