@@ -27,13 +27,13 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraftforge.common.loot.IGlobalLootModifier;
-import net.minecraftforge.common.loot.LootModifier;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
+import net.neoforged.neoforge.common.loot.LootModifier;
 
 public class ChestLootModifier extends LootModifier {
 	
@@ -43,9 +43,9 @@ public class ChestLootModifier extends LootModifier {
 	
 	public static final Supplier<Codec<ChestLootModifier>> CODEC = Suppliers.memoize(() ->
 		RecordCodecBuilder.create(
-			inst -> codecStart(inst).and(
+			inst -> LootModifier.codecStart(inst).and(
 				inst.group(
-					ForgeRegistries.ITEMS.getCodec().listOf().fieldOf("items").forGetter(m -> m.items),
+					BuiltInRegistries.ITEM.byNameCodec().listOf().fieldOf("items").forGetter(m -> m.items),
 					Codec.DOUBLE.fieldOf("chance").forGetter(m -> m.chance)
 				)
 			).apply(inst, ChestLootModifier::new)

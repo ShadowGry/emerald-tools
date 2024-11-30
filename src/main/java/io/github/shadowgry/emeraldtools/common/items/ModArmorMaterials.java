@@ -25,6 +25,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.EnumMap;
 import java.util.function.Supplier;
@@ -35,9 +36,9 @@ public enum ModArmorMaterials implements ArmorMaterial {
 		type.put(ArmorItem.Type.LEGGINGS, 5);
 		type.put(ArmorItem.Type.CHESTPLATE, 6);
 		type.put(ArmorItem.Type.HELMET, 2);
-	}), 12, SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, 0.0F, () -> {
-		return Ingredient.of(Items.EMERALD);
-	});
+	}), 12, SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, 0.0F, () ->
+		Ingredient.of(Items.EMERALD)
+	);
 	
 	private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap<>(ArmorItem.Type.class), (type) -> {
 		type.put(ArmorItem.Type.BOOTS, 13);
@@ -66,7 +67,16 @@ public enum ModArmorMaterials implements ArmorMaterial {
 		this.knockbackResistance = knockbackResistance;
 		this.repairIngredient = repairIngredient;
 	}
-	
+
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	public String getSerializedName() {
+		return getName();
+	}
+
 	@Override
 	public int getDurabilityForType(ArmorItem.Type type) {
 		return HEALTH_FUNCTION_FOR_TYPE.get(type) * durabilityMultiplier;
@@ -90,11 +100,6 @@ public enum ModArmorMaterials implements ArmorMaterial {
 	@Override
 	public Ingredient getRepairIngredient() {
 		return repairIngredient.get();
-	}
-	
-	@Override
-	public String getName() {
-		return name;
 	}
 	
 	@Override
