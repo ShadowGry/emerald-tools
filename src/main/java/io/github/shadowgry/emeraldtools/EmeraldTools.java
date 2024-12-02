@@ -20,16 +20,17 @@ package io.github.shadowgry.emeraldtools;
 import io.github.shadowgry.emeraldtools.common.items.ModCreativeModeTabs;
 import io.github.shadowgry.emeraldtools.common.items.ModItems;
 import io.github.shadowgry.emeraldtools.common.loot.ModLootModifiers;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
 
 @Mod(EmeraldTools.MOD_ID)
 public class EmeraldTools
 {
 	public static final String MOD_ID = "emeraldtools";
 	
-	public EmeraldTools() {
-		ModItems.registerItems();
-		ModCreativeModeTabs.register();
-		ModLootModifiers.registerModifiers();
+	public EmeraldTools(IEventBus modEventBus) {
+		ModItems.register(modEventBus);
+		ModCreativeModeTabs.register(modEventBus);
+		ModLootModifiers.register(modEventBus);
 	}
 }
