@@ -21,7 +21,6 @@ import com.mojang.serialization.Codec;
 
 import io.github.shadowgry.emeraldtools.EmeraldTools;
 
-import net.minecraft.core.registries.Registries;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
 import net.neoforged.neoforge.registries.DeferredHolder;
