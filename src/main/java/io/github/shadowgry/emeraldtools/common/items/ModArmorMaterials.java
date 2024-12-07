@@ -25,7 +25,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.EnumMap;
 import java.util.function.Supplier;
