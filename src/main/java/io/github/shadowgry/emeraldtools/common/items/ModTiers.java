@@ -17,20 +17,19 @@
  */
 package io.github.shadowgry.emeraldtools.common.items;
 
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.SimpleTier;
-import net.neoforged.neoforge.common.Tags;
 
 public class ModTiers {
 	public static final Tier EMERALD = new SimpleTier(
-		3,
+		BlockTags.INCORRECT_FOR_GOLD_TOOL,
 		779,
 		7.0F,
 		2.5F,
 		12,
-		Tags.Blocks.NEEDS_GOLD_TOOL,
 		() -> Ingredient.of(Items.EMERALD)
 	);
 }

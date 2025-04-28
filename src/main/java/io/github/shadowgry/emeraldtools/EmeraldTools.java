@@ -17,6 +17,7 @@
  */
 package io.github.shadowgry.emeraldtools;
 
+import io.github.shadowgry.emeraldtools.common.items.ModArmorMaterials;
 import io.github.shadowgry.emeraldtools.common.items.ModCreativeModeTabs;
 import io.github.shadowgry.emeraldtools.common.items.ModItems;
 import io.github.shadowgry.emeraldtools.common.loot.ModLootModifiers;
@@ -29,6 +30,7 @@ public class EmeraldTools
 	public static final String MOD_ID = "emeraldtools";
 	
 	public EmeraldTools(IEventBus modEventBus) {
+		ModArmorMaterials.register(modEventBus);
 		ModItems.register(modEventBus);
 		ModCreativeModeTabs.register(modEventBus);
 		ModLootModifiers.register(modEventBus);

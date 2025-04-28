@@ -22,92 +22,43 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
 import net.minecraft.Util;
-import net.minecraft.sounds.SoundEvent;
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 
 import java.util.EnumMap;
-import java.util.function.Supplier;
+import java.util.List;
 
-public enum ModArmorMaterials implements ArmorMaterial {
-	EMERALD("emerald", 25, Util.make(new EnumMap<>(ArmorItem.Type.class), (type) -> {
-		type.put(ArmorItem.Type.BOOTS, 2);
-		type.put(ArmorItem.Type.LEGGINGS, 5);
-		type.put(ArmorItem.Type.CHESTPLATE, 6);
-		type.put(ArmorItem.Type.HELMET, 2);
-	}), 12, SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, 0.0F, () ->
-		Ingredient.of(Items.EMERALD)
+public class ModArmorMaterials {
+	public static final DeferredRegister<ArmorMaterial> ARMOR_MATERIALS = DeferredRegister.create(
+		BuiltInRegistries.ARMOR_MATERIAL,
+		EmeraldTools.MOD_ID
 	);
-	
-	private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap<>(ArmorItem.Type.class), (type) -> {
-		type.put(ArmorItem.Type.BOOTS, 13);
-		type.put(ArmorItem.Type.LEGGINGS, 15);
-		type.put(ArmorItem.Type.CHESTPLATE, 16);
-		type.put(ArmorItem.Type.HELMET, 11);
-	});
-	private final String name;
-	private final int durabilityMultiplier;
-	private final EnumMap<ArmorItem.Type, Integer> protectionFunctionForType;
-	private final int enchantmentValue;
-	private final SoundEvent sound;
-	private final float toughness;
-	private final float knockbackResistance;
-	private final Supplier<Ingredient> repairIngredient;
-	
-	ModArmorMaterials(String name, int durabilityMultiplier, EnumMap<ArmorItem.Type, Integer> protectionFunctionForType,
-					  int enchantmentValue, SoundEvent sound, float toughness, float knockbackResistance,
-					  Supplier<Ingredient> repairIngredient) {
-		this.name = EmeraldTools.MOD_ID + ":" + name;
-		this.durabilityMultiplier = durabilityMultiplier;
-		this.protectionFunctionForType = protectionFunctionForType;
-		this.enchantmentValue = enchantmentValue;
-		this.sound = sound;
-		this.toughness = toughness;
-		this.knockbackResistance = knockbackResistance;
-		this.repairIngredient = repairIngredient;
-	}
 
-	@Override
-	public String getName() {
-		return name;
-	}
+	public static final Holder<ArmorMaterial> EMERALD = ARMOR_MATERIALS.register("emerald", () -> new ArmorMaterial(
+		Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+			map.put(ArmorItem.Type.BOOTS, 2);
+			map.put(ArmorItem.Type.LEGGINGS, 5);
+			map.put(ArmorItem.Type.CHESTPLATE, 6);
+			map.put(ArmorItem.Type.HELMET, 2);
+		}),
+		12,
+		SoundEvents.ARMOR_EQUIP_DIAMOND,
+		() -> Ingredient.of(Items.EMERALD),
+		List.of(
+			new ArmorMaterial.Layer(
+				new ResourceLocation(EmeraldTools.MOD_ID, "emerald")
+			)
+		),
+		1.0F,
+		0.0F
+	));
 
-	public String getSerializedName() {
-		return getName();
-	}
-
-	@Override
-	public int getDurabilityForType(ArmorItem.Type type) {
-		return HEALTH_FUNCTION_FOR_TYPE.get(type) * durabilityMultiplier;
-	}
-	
-	@Override
-	public int getDefenseForType(ArmorItem.Type type) {
-		return protectionFunctionForType.get(type);
-	}
-	
-	@Override
-	public int getEnchantmentValue() {
-		return enchantmentValue;
-	}
-	
-	@Override
-	public SoundEvent getEquipSound() {
-		return sound;
-	}
-	
-	@Override
-	public Ingredient getRepairIngredient() {
-		return repairIngredient.get();
-	}
-	
-	@Override
-	public float getToughness() {
-		return toughness;
-	}
-	
-	@Override
-	public float getKnockbackResistance() {
-		return knockbackResistance;
+	public static void register(IEventBus modEventBus) {
+		ARMOR_MATERIALS.register(modEventBus);
 	}
 }
