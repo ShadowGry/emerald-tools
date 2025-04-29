@@ -17,20 +17,21 @@
  */
 package io.github.shadowgry.emeraldtools.common.loot;
 
-import com.mojang.serialization.Codec;
+import java.util.function.Supplier;
+
+import com.mojang.serialization.MapCodec;
 
 import io.github.shadowgry.emeraldtools.EmeraldTools;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class ModLootModifiers {
 	
-	private static final DeferredRegister<Codec<? extends IGlobalLootModifier>> MOD_LOOT_MODIFIER_SERIALIZERS = DeferredRegister.create(NeoForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, EmeraldTools.MOD_ID);
-	private static final DeferredHolder<Codec<? extends IGlobalLootModifier>, Codec<ChestLootModifier>> CHEST_LOOT_MODIFIER_CODEC = MOD_LOOT_MODIFIER_SERIALIZERS.register("add_chest_item", ChestLootModifier.CODEC);
+	private static final DeferredRegister<MapCodec<? extends IGlobalLootModifier>> MOD_LOOT_MODIFIER_SERIALIZERS = DeferredRegister.create(NeoForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, EmeraldTools.MOD_ID);
+	private static final Supplier<MapCodec<ChestLootModifier>> CHEST_LOOT_MODIFIER_CODEC = MOD_LOOT_MODIFIER_SERIALIZERS.register("add_chest_item", ChestLootModifier.CODEC);
 	
 	public static void register(IEventBus modEventBus) {
 		MOD_LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
