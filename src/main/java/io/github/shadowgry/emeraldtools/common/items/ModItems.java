@@ -62,7 +62,7 @@ public class ModItems {
 		new Item.Properties().attributes(
 			AxeItem.createAttributes(
 				ModTiers.EMERALD,
-				6.0F,
+				5.5F,
 				-3.1F
 			)
 		)
@@ -72,7 +72,7 @@ public class ModItems {
 		new Item.Properties().attributes(
 			HoeItem.createAttributes(
 				ModTiers.EMERALD,
-				-2,
+				-2.5F,
 				-1.0F
 			)
 		)
