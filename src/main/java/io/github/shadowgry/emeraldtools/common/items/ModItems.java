@@ -111,7 +111,7 @@ public class ModItems {
 	));
 	
 	// Emerald Horse Armor
-	public static final DeferredItem<AnimalArmorItem> EMERALD_HORSE_ARMOR = ITEMS.register("emerald_horse_armor", () -> new AnimalArmorItem(
+	public static final Supplier<AnimalArmorItem> EMERALD_HORSE_ARMOR = ITEMS.register("emerald_horse_armor", () -> new AnimalArmorItem(
 		ModArmorMaterials.EMERALD,
 		AnimalArmorItem.BodyType.EQUESTRIAN,
 		false,
