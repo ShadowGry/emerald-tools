@@ -17,11 +17,13 @@
  */
 package io.github.shadowgry.emeraldtools.common.items;
 
+import java.util.function.Supplier;
+
 import io.github.shadowgry.emeraldtools.EmeraldTools;
+import net.minecraft.world.item.AnimalArmorItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
-import net.minecraft.world.item.HorseArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
@@ -35,20 +37,86 @@ public class ModItems {
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(EmeraldTools.MOD_ID);
 	
 	// Emerald Items
-	public static final DeferredItem<ShovelItem>  EMERALD_SHOVEL  = ITEMS.register("emerald_shovel",  () -> new ShovelItem( ModTiers.EMERALD,  1.5F, -3.0F, new Item.Properties()));
-	public static final DeferredItem<PickaxeItem> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () -> new PickaxeItem(ModTiers.EMERALD,  1,    -2.8F, new Item.Properties()));
-	public static final DeferredItem<AxeItem>     EMERALD_AXE     = ITEMS.register("emerald_axe",     () -> new AxeItem(    ModTiers.EMERALD,  6.0F, -3.1F, new Item.Properties()));
-	public static final DeferredItem<HoeItem>     EMERALD_HOE     = ITEMS.register("emerald_hoe",     () -> new HoeItem(    ModTiers.EMERALD, -2,    -1.0F, new Item.Properties()));
-	public static final DeferredItem<SwordItem>   EMERALD_SWORD   = ITEMS.register("emerald_sword",   () -> new SwordItem(  ModTiers.EMERALD,  3,    -2.4F, new Item.Properties()));
+	public static final Supplier<ShovelItem> EMERALD_SHOVEL = ITEMS.register("emerald_shovel", () -> new ShovelItem(
+		ModTiers.EMERALD,
+		new Item.Properties().attributes(
+			ShovelItem.createAttributes(
+				ModTiers.EMERALD,
+				1.5F,
+				-3.0F
+			)
+		)
+	));
+	public static final Supplier<PickaxeItem> EMERALD_PICKAXE = ITEMS.register("emerald_pickaxe", () -> new PickaxeItem(
+		ModTiers.EMERALD,
+		new Item.Properties().attributes(
+			PickaxeItem.createAttributes(
+				ModTiers.EMERALD,
+				1,
+				-2.8F
+			)
+		)
+	));
+	public static final Supplier<AxeItem> EMERALD_AXE = ITEMS.register("emerald_axe", () -> new AxeItem(
+		ModTiers.EMERALD,
+		new Item.Properties().attributes(
+			AxeItem.createAttributes(
+				ModTiers.EMERALD,
+				6.0F,
+				-3.1F
+			)
+		)
+	));
+	public static final Supplier<HoeItem> EMERALD_HOE = ITEMS.register("emerald_hoe", () -> new HoeItem(
+		ModTiers.EMERALD,
+		new Item.Properties().attributes(
+			HoeItem.createAttributes(
+				ModTiers.EMERALD,
+				-2,
+				-1.0F
+			)
+		)
+	));
+	public static final Supplier<SwordItem> EMERALD_SWORD = ITEMS.register("emerald_sword", () -> new SwordItem(
+		ModTiers.EMERALD,
+		new Item.Properties().attributes(
+			SwordItem.createAttributes(
+				ModTiers.EMERALD,
+				3,
+				-2.4F
+			)
+		)
+	));
 	
 	// Emerald Armor
-	public static final DeferredItem<ArmorItem> EMERALD_HELMET     = ITEMS.register("emerald_helmet",     () -> new ArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.HELMET,     new Item.Properties()));
-	public static final DeferredItem<ArmorItem> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-	public static final DeferredItem<ArmorItem> EMERALD_LEGGINGS   = ITEMS.register("emerald_leggings",   () -> new ArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.LEGGINGS,   new Item.Properties()));
-	public static final DeferredItem<ArmorItem> EMERALD_BOOTS      = ITEMS.register("emerald_boots",      () -> new ArmorItem(ModArmorMaterials.EMERALD, ArmorItem.Type.BOOTS,      new Item.Properties()));
+	public static final Supplier<ArmorItem> EMERALD_HELMET = ITEMS.register("emerald_helmet", () -> new ArmorItem(
+		ModArmorMaterials.EMERALD,
+		ArmorItem.Type.HELMET,
+		new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(11))
+	));
+	public static final Supplier<ArmorItem> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(
+		ModArmorMaterials.EMERALD,
+		ArmorItem.Type.CHESTPLATE,
+		new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(16))
+	));
+	public static final Supplier<ArmorItem> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () -> new ArmorItem(
+		ModArmorMaterials.EMERALD,
+		ArmorItem.Type.LEGGINGS,
+		new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(15))
+	));
+	public static final Supplier<ArmorItem> EMERALD_BOOTS = ITEMS.register("emerald_boots", () -> new ArmorItem(
+		ModArmorMaterials.EMERALD,
+		ArmorItem.Type.BOOTS,
+		new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(13))
+	));
 	
 	// Emerald Horse Armor
-	public static final DeferredItem<HorseArmorItem> EMERALD_HORSE_ARMOR = ITEMS.register("emerald_horse_armor", () -> new HorseArmorItem(9, "emerald", new Item.Properties().stacksTo(1)));
+	public static final DeferredItem<AnimalArmorItem> EMERALD_HORSE_ARMOR = ITEMS.register("emerald_horse_armor", () -> new AnimalArmorItem(
+		ModArmorMaterials.EMERALD,
+		AnimalArmorItem.BodyType.EQUESTRIAN,
+		false,
+		new Item.Properties().stacksTo(1))
+	);
 	
 	public static void register(IEventBus modEventBus) {
 		ITEMS.register(modEventBus);
