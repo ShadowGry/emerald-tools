@@ -24,6 +24,7 @@ import org.jetbrains.annotations.NotNull;
 import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
@@ -41,8 +42,8 @@ public class ChestLootModifier extends LootModifier {
 	private final double chance;
 	private final int size;
 	
-	public static final Supplier<Codec<ChestLootModifier>> CODEC = Suppliers.memoize(() ->
-		RecordCodecBuilder.create(
+	public static final Supplier<MapCodec<ChestLootModifier>> CODEC = Suppliers.memoize(() ->
+		RecordCodecBuilder.mapCodec(
 			inst -> LootModifier.codecStart(inst).and(
 				inst.group(
 					BuiltInRegistries.ITEM.byNameCodec().listOf().fieldOf("items").forGetter(m -> m.items),
@@ -70,7 +71,7 @@ public class ChestLootModifier extends LootModifier {
 	}
 	
 	@Override
-	public Codec<? extends IGlobalLootModifier> codec() {
+	public MapCodec<? extends IGlobalLootModifier> codec() {
 		// Return the codec used to encode and decode this modifier
 		return CODEC.get();
 	}
